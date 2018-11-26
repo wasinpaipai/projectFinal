@@ -1,0 +1,100 @@
+@media only screen and (min-width: 1000px) {
+	#desktop {
+		display: block;
+	}
+
+	.sidenav {
+		display: none;
+	}
+
+	.click {
+		display: none;
+	}
+
+	#main_menu {
+		width: 75vw;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	li {
+		display: inline-block;
+		width: 12.5em;
+	}
+
+	h3 {
+		margin-top: 0em;
+		margin-bottom: 0em;
+		color: black;
+		font-size: 25px;
+	}
+
+	h3:hover {
+		background-color: black;
+		color: white;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin: 0.25em 0em;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 25px;
+	}
+
+	.pic {
+		border-radius: 50%;
+		width: 15em;
+		height: 15em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.cont {
+		padding-top: 9em;
+	}
+
+	.flexible {
+		display: flex;
+		align-content: flex-start;
+	}
+
+	.contact {
+		width: 50%;
+	}
+
+	#shop_logo {
+		width: 8.5em;
+	}
+
+	.icon {
+		width: 2.5em;
+		transition: filter .3s;
+	}
+
+	.pic_dri {
+    	width: 22%;
+	}
+
+	.pic_bak {
+    	width: 42%;
+    	margin: 1.5em;
+	}
+
+	.text {
+		font-size: 20px;
+	}
+
+
+}

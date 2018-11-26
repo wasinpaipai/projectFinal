@@ -1,81 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ONE TWO TWO - Home</title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <title>ONE TWO TWO - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="http://jabont.com/jayss/jayss.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_mobile.css">
+    <link rel="stylesheet" type="text/css" href="style_desktop.css">
 </head>
-<body style="font-family: 'Kanit', sans-serif;">
-    <div id="menu">
+<body style="font-family: 'Athiti', sans-serif;">
+    <nav>
         <div class="logo">
-            <a href="emp_login.php"><li><h3>Emp</h3></li></a>
-            <img id="logo122" src="icon_122.jpg" align="middle">
+            <img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.php"><h3 class="moment">Home</h3></a>
+                <a href="history.php"><h3>History</h3></a>
+                <a href="menu.php"><h3>Menu</h3></a>
+                <a href="promotion.php"><h3>Promotion</h3></a>
+                <a href="contact.php"><h3>Contact</h3></a>
+            </div>
+
+            <span class="click left">&nbsp;&nbsp;&nbsp;</span>
+            <span class="click right" onclick="openNav()"><b>&#9776;</b></span>
         </div>
-        <menu class="center">
-            <a href="index.php"><li class="moment"><h3>Home</h3></li></a>
+        <div id="main_menu">
+            <a href="index.php"><li><h3 class="moment">Home</h3></li></a>
             <a href="history.php"><li><h3>History</h3></li></a>
             <a href="menu.php"><li><h3>Menu</h3></li></a>
             <a href="promotion.php"><li><h3>Promotion</h3></li></a>
             <a href="contact.php"><li><h3>Contact</h3></li></a>
-        </menu>
-    </div>
-
-    <div role="main" class="container">
-        <div class="pic" style="width: 80%; margin-left: auto; margin-right: auto; overflow: hidden;">
-            <img src="pic_001.jpg" class="slide anime" style="width: 100%;">
-            <img src="pic_002.jpg" class="slide anime" style="width: 100%;">
-            <img src="pic_003.jpg" class="slide anime" style="width: 100%;">
-            <img src="pic_004.jpg" class="slide anime" style="width: 100%;">
         </div>
+        
+    </nav>
+
+    <div class="cont">
+        <div class="slider" id="main-slider"><!-- outermost container element -->
+            <div class="slider-wrapper"><!-- innermost wrapper element -->
+                <img src="Multi/pic_001.jpg" alt="First" class="slide" /><!-- slides -->
+                <img src="Multi/pic_002.jpg" alt="Second" class="slide" />
+                <img src="Multi/pic_003.jpg" alt="Third" class="slide" />
+                <img src="Multi/pic_004.jpg" alt="Fourth" class="slide" />
+            </div>
+        </div>  
     </div>
 
-    <div class="icon_area" style="width: 130px; margin-left: auto; margin-right: auto;">
-        <a href="https://www.facebook.com/Onetwotwocoffeebar/" target ="_blank"><img class="icon" src="fb_icon.png"></a>
-        <a href="https://www.instagram.com/onetwotwocoffeebar/" target ="_blank"><img class="icon" src="ig_icon.png"></a>
-        <!-- <a href=""><img class="icon" src="mail_icon.png" style="width: 35px; margin: 2px; height: 35px; border-radius: 50%;"></a> -->
-        <a href="https://www.google.co.th/maps/place/One+Two+Two+Coffee+Bar/@13.6860306,100.6464808,17z/data=!3m1!4b1!4m5!3m4!1s0x311d6076657be2c5:0xa663c4f424ec2740!8m2!3d13.6860254!4d100.6486695?hl=th&authuser=0" target ="_blank"><img class="icon" src="map_icon.png"></a>
+    <div class="icon_area">
+        <a href="https://www.facebook.com/Onetwotwocoffeebar/" target ="_blank"><img class="icon" src="Multi/fb_icon.png"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/onetwotwocoffeebar/" target ="_blank"><img class="icon" src="Multi/ig_icon.png"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.google.co.th/maps/place/One+Two+Two+Coffee+Bar/@13.6860306,100.6464808,17z/data=!3m1!4b1!4m5!3m4!1s0x311d6076657be2c5:0xa663c4f424ec2740!8m2!3d13.6860254!4d100.6486695?hl=th&authuser=0" target ="_blank"><img class="icon" src="Multi/map_icon.png"></a>
     </div>
 
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("slide");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 4500);
+    <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
         }
 
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("menu").style.height = "3.5em";
-                // document.getElementsByClassName("logo")[0].style.width = "374px";
-                document.getElementById("logo122").style.width = "0em";
-                document.getElementsByClassName("logo")[0].style.height = "0em";
-                // document.getElementsByClassName("logo")[0].style.marginLeft = "15em";
-                // document.getElementsByClassName("center").style.width = "650px";
-                // document.getElementsByTagName("li").style.width = "130px";
-            }
-            else {
-                document.getElementById("menu").style.height = "9em";
-                // document.getElementsByClassName("logo")[0].style.width = "100%";
-                document.getElementById("logo122").style.width = "7em";
-                document.getElementsByClassName("logo")[0].style.height = "5.5em";
-                // document.getElementsByClassName("logo")[0].style.marginLeft = "0em";
-                // document.getElementsByClassName("center").style.width = "1024px";
-                // document.getElementsByTagName("li").style.width = "204.8px";
-            }
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
         }
+
+        (function() {
+            function Slideshow( element ) {
+                this.el = document.querySelector( element );
+                this.init();
+            }
+            
+            Slideshow.prototype = {
+                init: function() {
+                    this.wrapper = this.el.querySelector( ".slider-wrapper" );
+                    this.slides = this.el.querySelectorAll( ".slide" );
+                    this.previous = this.el.querySelector( ".slider-previous" );
+                    this.next = this.el.querySelector( ".slider-next" );
+                    this.index = 0;
+                    this.total = this.slides.length;
+                    this.timer = null;
+                    
+                    this.action();
+                    this.stopStart();   
+                },
+                _slideTo: function( slide ) {
+                    var currentSlide = this.slides[slide];
+                    currentSlide.style.opacity = 1;
+                    
+                    for( var i = 0; i < this.slides.length; i++ ) {
+                        var slide = this.slides[i];
+                        if( slide !== currentSlide ) {
+                            slide.style.opacity = 0;
+                        }
+                    }
+                },
+                action: function() {
+                    var self = this;
+                    self.timer = setInterval(function() {
+                        self.index++;
+                        if( self.index == self.slides.length ) {
+                            self.index = 0;
+                        }
+                        self._slideTo( self.index );
+                        
+                    }, 4000);
+                },
+                stopStart: function() {
+                    var self = this;
+                    self.el.addEventListener( "mouseover", function() {
+                        clearInterval( self.timer );
+                        self.timer = null;
+                        
+                    }, false);
+                    self.el.addEventListener( "mouseout", function() {
+                        self.action();
+                        
+                    }, false);
+                }
+            };
+            
+            document.addEventListener( "DOMContentLoaded", function() {
+                var slider = new Slideshow( "#main-slider" );
+            });
+        })();
     </script>
+
 </body>
 </html>

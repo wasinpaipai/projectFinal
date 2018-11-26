@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ONE TWO TWO - Promotion</title>
-	<meta charset="utf-8">
-	<!-- <link rel="stylesheet" type="text/css" href="http://jabont.com/jayss/jayss.css"> -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>ONE TWO TWO - Promotion</title>
+    <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="http://jabont.com/jayss/jayss.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_mobile.css">
+    <link rel="stylesheet" type="text/css" href="style_desktop.css">
 </head>
-<body style="font-family: 'Kanit', sans-serif;">
-    <div id="menu">
+<body style="font-family: 'Athiti', sans-serif;">
+    <<nav>
         <div class="logo">
-            <img id="logo122" src="icon_122.jpg" align="middle">
+            <img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.php"><h3>Home</h3></a>
+                <a href="history.php"><h3>History</h3></a>
+                <a href="menu.php"><h3>Menu</h3></a>
+                <a href="promotion.php"><h3>Promotion</h3></a>
+                <a href="contact.php"><h3>Contact</h3></a>
+            </div>
+
+            <span class="click left">&nbsp;&nbsp;&nbsp;</span>
+            <span class="click right" onclick="openNav()"><b>&#9776;</b></span>
         </div>
-        <menu class="center">
-            <a href="index.php"><li class="moment"><h3>Home</h3></li></a>
+        <div id="main_menu">
+            <a href="index.php"><li><h3>Home</h3></li></a>
             <a href="history.php"><li><h3>History</h3></li></a>
             <a href="menu.php"><li><h3>Menu</h3></li></a>
             <a href="promotion.php"><li><h3>Promotion</h3></li></a>
             <a href="contact.php"><li><h3>Contact</h3></li></a>
-        </menu>
-    </div>
-    <div role="main" class="container">
-        <div class="card">
-    		<div class="redeem">
-    			<form method="POST" action="add_member2.php">
-    			Name: <input type="text" name="name" value="">
-    			<br>
-    			Phone No.: <input	type="text" name="num" placeholder="Number"value="">
-    			<br>
-    			<button name="ok" value="pn">Submit</button>
-    		</form>
-    		</div>
         </div>
-	</div>
-
-	<script>
-		window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("menu").style.height = "3.5em";
-                // document.getElementsByClassName("logo")[0].style.width = "374px";
-                document.getElementById("logo122").style.width = "0em";
-                document.getElementsByClassName("logo")[0].style.height = "0em";
-                // document.getElementsByClassName("logo")[0].style.marginLeft = "15em";
-                // document.getElementsByClassName("center").style.width = "650px";
-                // document.getElementsByTagName("li").style.width = "130px";
-            }
-            else {
-                document.getElementById("menu").style.height = "9em";
-                // document.getElementsByClassName("logo")[0].style.width = "100%";
-                document.getElementById("logo122").style.width = "7em";
-                document.getElementsByClassName("logo")[0].style.height = "5.5em";
-                // document.getElementsByClassName("logo")[0].style.marginLeft = "0em";
-                // document.getElementsByClassName("center").style.width = "1024px";
-                // document.getElementsByTagName("li").style.width = "204.8px";
-            }
+    </nav>
+    <div class="cont">
+        <div role="main" class="container">
+        <div class="card">
+            <div class="redeem">
+                <form method="POST" action="add_member2.php">
+                Name: <input type="text" name="name" value="">
+                <br>
+                Phone No.: <input   type="text" name="num" placeholder="Number"value="">
+                <br>
+                <button name="ok" value="pn">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    </div>
+	<script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
         }
-	</script>
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 </body>
 </html>
