@@ -32,7 +32,6 @@
             <a href="promotion.php"><li><h3>Promotion</h3></li></a>
             <a href="contact.php"><li><h3>Contact</h3></li></a>
         </div>
-        
     </nav>
 
     <div class="cont">
@@ -43,7 +42,7 @@
                 <img src="Multi/pic_003.jpg" alt="Third" class="slide" />
                 <img src="Multi/pic_004.jpg" alt="Fourth" class="slide" />
             </div>
-        </div>  
+        </div>
     </div>
 
     <div class="icon_area">
@@ -51,6 +50,8 @@
         <a href="https://www.instagram.com/onetwotwocoffeebar/" target ="_blank"><img class="icon" src="Multi/ig_icon.png"></a>&nbsp;&nbsp;&nbsp;
         <a href="https://www.google.co.th/maps/place/One+Two+Two+Coffee+Bar/@13.6860306,100.6464808,17z/data=!3m1!4b1!4m5!3m4!1s0x311d6076657be2c5:0xa663c4f424ec2740!8m2!3d13.6860254!4d100.6486695?hl=th&authuser=0" target ="_blank"><img class="icon" src="Multi/map_icon.png"></a>
     </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script type="text/javascript">
         /* Set the width of the side navigation to 250px */
@@ -122,6 +123,23 @@
                 var slider = new Slideshow( "#main-slider" );
             });
         })();
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 
 </body>

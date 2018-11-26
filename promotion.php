@@ -36,17 +36,20 @@
     </nav>
 
     <div class="cont">
+        <h1>Promotion</h1>
         <div role="main" class="container">
             <div class="card">
                 <div class="redeem">
                     <form method="POST" action="cus_redeem1.php">
-                    Phonenumber: <input type="text" name="num">
-                    <button name="ok" value="pn" >Login</button>
+                    <b>Phone Number : </b><input type="text" name="num">
+                    <button class="input" name="ok" value="pn" >Login</button>
                 </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 	<script type="text/javascript">
         /* Set the width of the side navigation to 250px */
@@ -57,6 +60,23 @@
         /* Set the width of the side navigation to 0 */
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
 </body>

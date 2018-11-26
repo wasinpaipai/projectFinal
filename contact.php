@@ -68,7 +68,7 @@
         <br>
         <h2 style="text-align: center;">Map</h2>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.6074070743307!2d100.6474615843594!3d13.686298394365682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6076657be2c5%3A0xa663c4f424ec2740!2sOne+Two+Two+Coffee+Bar!5e0!3m2!1sth!2sth!4v1543203837932" width="75%" height="350px" frameborder="0" style="border:0;" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.6074070743307!2d100.6474615843594!3d13.686298394365682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6076657be2c5%3A0xa663c4f424ec2740!2sOne+Two+Two+Coffee+Bar!5e0!3m2!1sth!2sth!4v1543203837932" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -77,6 +77,8 @@
         <a href="https://www.instagram.com/onetwotwocoffeebar/" target ="_blank"><img class="icon" src="Multi/ig_icon.png"></a>&nbsp;&nbsp;&nbsp;
         <a href="https://www.google.co.th/maps/place/One+Two+Two+Coffee+Bar/@13.6860306,100.6464808,17z/data=!3m1!4b1!4m5!3m4!1s0x311d6076657be2c5:0xa663c4f424ec2740!8m2!3d13.6860254!4d100.6486695?hl=th&authuser=0" target ="_blank"><img class="icon" src="Multi/map_icon.png"></a>
     </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script type="text/javascript">
         /* Set the width of the side navigation to 250px */
@@ -87,6 +89,23 @@
         /* Set the width of the side navigation to 0 */
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
 

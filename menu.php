@@ -235,21 +235,21 @@
             <div class="pic_bak">
                 <img src="Multi/bak_002.jpg" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text"><b>Mini Butter Croissant</b><br>
+                    <div class="text-b"><b>Mini Butter Croissant</b><br>
                     25 บาท</div>
                 </div>
             </div>
             <div class="pic_bak">
                 <img src="Multi/bak_005.jpg" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text"><b>Sausage Roll</b><br>
+                    <div class="text-b"><b>Sausage Roll</b><br>
                     70 บาท</div>
                 </div>
             </div>
             <div class="pic_bak">
                 <img src="Multi/bak_006.jpg" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text"><b>Tuna Puff</b><br>
+                    <div class="text-b"><b>Tuna Puff</b><br>
                     50 บาท</div>
                 </div>
             </div>
@@ -261,6 +261,8 @@
         <a href="https://www.instagram.com/onetwotwocoffeebar/" target ="_blank"><img class="icon" src="Multi/ig_icon.png"></a>&nbsp;&nbsp;&nbsp;
         <a href="https://www.google.co.th/maps/place/One+Two+Two+Coffee+Bar/@13.6860306,100.6464808,17z/data=!3m1!4b1!4m5!3m4!1s0x311d6076657be2c5:0xa663c4f424ec2740!8m2!3d13.6860254!4d100.6486695?hl=th&authuser=0" target ="_blank"><img class="icon" src="Multi/map_icon.png"></a>
     </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script type="text/javascript">
         /* Set the width of the side navigation to 250px */
@@ -298,6 +300,23 @@
 
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 
 </body>

@@ -7,6 +7,18 @@
 		display: none;
 	}
 
+	.slider {
+		width: 55em;
+		margin: auto;
+		margin-top: 3em;
+	}
+
+	.slider-wrapper {
+		width: 55em;
+		height: 40em;
+		position: relative;
+	}
+
 	.click {
 		display: none;
 	}
@@ -46,7 +58,7 @@
 	}
 
 	p {
-		font-size: 20px;
+		font-size: 24px;
 	}
 
 	h4 {
@@ -93,8 +105,18 @@
 	}
 
 	.text {
-		font-size: 20px;
+		font-size: 25px;
 	}
 
+	.text-b {
+		font-size: 37px;
+	}
 
+	.container {
+		margin-top: 2em;
+	}
+
+	.list_menu {
+		font-size: 24px;
+	}
 }

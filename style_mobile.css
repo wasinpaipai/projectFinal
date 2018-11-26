@@ -74,6 +74,18 @@
 	    .sidenav a {font-size: 18px;}
 	}
 
+	.slider {
+		width: 45em;
+		margin: auto;
+		margin-top: 3em;
+	}
+
+	.slider-wrapper {
+		width: 45em;
+		height: 30em;
+		position: relative;
+	}
+
 	.cont {
 		padding-top: 7em;
 	}
@@ -177,14 +189,26 @@
 	}
 
 	.text {
+		font-size: 33px;
+	}
+
+	.text-b {
+		font-size: 45px;
+	}
+
+	.pb {
+	    background-color: white;
+	    border: 0.1px solid #000000;
+	    padding: 44px;
+	    width: 180px;
+	    margin-left: -25px;
+	}
+
+	.container {
+		margin-top: 4em;
+	}
+
+	.list_menu {
 		font-size: 28px;
 	}
-	.pb {
-    background-color: white;
-    border: 0.1px solid #000000;
-    padding: 44px;
-    width: 180px;
-    margin-left: -25px;
-}
-
 }
