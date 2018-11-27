@@ -10,7 +10,7 @@ body {
 }
 
 .logo {
-	height: 7em;
+	height: 8em;
 }
 
 nav {
@@ -51,6 +51,9 @@ h2, h4 {
 	margin: 0.25em 0em;
 }
 
+p {
+	margin-top: -0.25em;
+}
 
 .icon_area {
 	display: flex;
@@ -166,10 +169,8 @@ td {
 
 .pb {
     background-color: white;
-    border: 0.1px solid #000000;
-    padding: 44px;
-    width: 180px;
-    margin-left: -25px;
+    padding: 1em;
+    width: 85%;
 }
 
 /* Add some padding inside the card container */
@@ -199,7 +200,7 @@ input{
 	background: #5D6D7E;
     border-radius: 2em;
     padding: 0.25em;
-    width: 5em;
+    /*width: 5em;*/
     color: white;
     border-color: #5D6D7E;
     cursor: default;

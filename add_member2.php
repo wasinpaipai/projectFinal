@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>ONE TWO TWO - Promotion</title>
+	<title>ONE TWO TWO - Employee</title>
 	<link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="http://jabont.com/jayss/jayss.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,14 +12,15 @@
 <body style="font-family: 'Athiti', sans-serif;">
    <nav>
         <div class="logo">
-            <img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+             <a href="emp_login.php"><img id="shop_logo" src="Multi/icon_122.jpg" align="middle"></a>
         </div>
     </nav>
 
     <div class="cont">
+	<h1>เพิ่มข้อมูลสำเร็จ</h1>
     <div role="main" class="container">
     	<div class="card">
-    		<div class="login">
+    		<div class="redeem">
 		 <?php
 			function conn(){
 				$conn = new mysqli("localhost", "root","", "tt");
@@ -50,12 +51,14 @@
 					while($row = $result->fetch_assoc()) {
 					?>
 						<p class="pb">
-							Name : <?=$row['name']?>
+							<b>Name : </b><?=$row['name']?>
 							<br> 
-							No. : <?=$row['num']?>
+							<b>No. : </b><?=$row['num']?>
 							<br>
-							Point : <?=$row['star']?>
+							<b>Point : </b><?=$row['star']?>
 						</p>
+						<br>
+						<button class="input" onclick="location.href='emp_login.php'">กลับสู่หน้าแรก</button>
 					<?php 
 				}
 			}

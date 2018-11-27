@@ -87,7 +87,7 @@
 	}
 
 	.cont {
-		padding-top: 7em;
+		padding-top: 9em;
 	}
 
 	.flexible {
@@ -194,14 +194,6 @@
 
 	.text-b {
 		font-size: 45px;
-	}
-
-	.pb {
-	    background-color: white;
-	    border: 0.1px solid #000000;
-	    padding: 44px;
-	    width: 180px;
-	    margin-left: -25px;
 	}
 
 	.container {

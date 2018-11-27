@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>ONE TWO TWO - Promotion</title>
+	<title>ONE TWO TWO - Employee</title>
 	<link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="http://jabont.com/jayss/jayss.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,11 +12,12 @@
 <body style="font-family: 'Athiti', sans-serif;">
 	<nav>
         <div class="logo">
-            <img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+            <a href="emp_login.php"><img id="shop_logo" src="Multi/icon_122.jpg" align="middle"></a>
         </div>
     </nav>
 
     <div class="cont">
+    <h1>ข้อมูลลูกค้า</h1>
 	<div role="main" class="container">
 		<div class="card">
 			<div class="redeem">
@@ -36,18 +37,18 @@
 					while($row = $result->fetch_assoc()) {
 					?>
 						<p class="pb">
-							Name : <?=$row['name']?>
+							<b>Name : </b><?=$row['name']?>
 							<br> 
-							No. : <?=$row['num']?>
+							<b>No. : </b><?=$row['num']?>
 							<br>
-							Point : <?=$row['star']?>
+							<b>Point : </b><?=$row['star']?>
 						</p>
 							<form method="POST">
 								<input	type="hidden" name="star" value="<?=$row['star']?>">
 								<input type="hidden" name="id" value="<?=$row['id']?>">
 								<input type="hidden" name="code" value="<?$_POST['code']?>">
 								<input type="text" name="code">
-								<button name="ok" value="rd">Remdeem
+								<button class="input" name="ok" value="rd">Comfirm Code
 								</button>
 							</form>
 						<?php
@@ -60,12 +61,12 @@
 					$code_result = $conn->query($code_sql);
 					$code_row = $code_result->fetch_assoc();
 							if(!$code_row){
-							      echo "This code is Incorrect!";
-							 }else{
+							      echo '<p class="pb"><b>This code is Incorrect!!!!</b></p>';
+							} else {
 											$star=$_POST['star'];
 											$id=$_POST['id'];
-											echo "Star = ";
-											echo $star-10; ?>
+											echo '<p class="pb"><b>Star = ';
+											echo $star-10 , '</b></p>'; ?>
 											<?php
 												$conn = conn();
 												$id = $_POST['id'];
@@ -83,7 +84,7 @@
 								}
 								?>
 								<br> 
-								<button onclick="location.href='index.php'">Back to Homepage</button>
+								<center><button class="input" onclick="location.href='index.php'">Back to Homepage</button></center>
 								<?php
 							}
 			?>

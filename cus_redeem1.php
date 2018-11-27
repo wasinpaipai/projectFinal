@@ -12,7 +12,7 @@
 <body style="font-family: 'Athiti', sans-serif;">
 	<nav>
 		<div class="logo">
-			<img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+            <a href="index.php"><img id="shop_logo" src="Multi/icon_122.jpg" align="middle"></a>
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="index.php"><h3>Home</h3></a>
@@ -35,6 +35,7 @@
 		
 	</nav>
 	<div class="cont">
+		<h1>ข้อมูลของคุณ</h1>
 		<div role="main" class="container">
 			<div class="card">
 			<div class="redeem">
@@ -51,59 +52,64 @@
 					$sql = "SELECT * FROM phonenumber
 					WHERE num = $num";
 					$result = $conn->query($sql);
-					while($row = $result->fetch_assoc()) {
-					?>
+					$row = $result->fetch_assoc();
+					if (!$row) {
+						echo '<h4 align="center"><b>Your phone number is Incorrect!</b></h4>'; ?>
+						<center><button class="input" onclick="location.href='promotion.php'">Back</button></center>
+					<?php } else { ?>
 						<p class="pb">
-							Name : <?=$row['name']?>
+							<b>Name : </b><?=$row['name']?>
 							<br> 
-							No. : <?=$row['num']?>
+							<b>No. : </b><?=$row['num']?>
 							<br>
-							Point : <?=$row['star']?>
+							<b>Point : </b><?=$row['star']?>
 						</p>
 							<form method="POST">
 								<input	type="hidden" name="star" value="<?=$row['star']?>">
 								<input type="hidden" name="id" value="<?=$row['id']?>">
-								<button name="ok" value="rd">Remdeem
-								</button>
+								<center><button class="input" name="ok" value="rd">ใช้แต้มของคุณ
+								</button></center>
 							</form>
-						
-						<?php
-					}
+						<?php }
 				}
 
 				if ($_POST['ok'] == 'rd') {
-						$star=$_POST['star'];
-						$id=$_POST['id'];
-						echo '<p>',$star; 
-						if ($star >= 10) {
-							//Show Drinks
-							echo "<br>Select your Drinks with the fade button and javascript animation</p>";
-							//$drinks=namedrinks;
-							?>
-							<form method="POST">
-								<button name="ok" value="cf">Confirmm!!!
-								</button>
-								<input	type="hidden" name="star" value="<?= $star?>">
-								<input	type="hidden" name="id" value="<?= $id?>">
-							</form>
-							<?php 
-								}
-							}
-				if ($_POST['ok'] == 'cf') 
-				{
+					$star=$_POST['star'];
+					$id=$_POST['id'];
+					echo '<b><p class="pb"> แต้มของคุณ : ',$star, '</b>';
+					if ($star >= 10) {
+						//Show Drinks
+						echo "<br>คุณสามารถใช้แต้มแลกน้ำฟรี 1 แก้ว<br>
+						<b>แต้มที่ใช้ = 10 แต้ม</b></p>";
+						//$drinks=namedrinks;
+						?>
+						<form method="POST">
+							<center><button class="input" name="ok" value="cf">ยืนยัน
+							</button></center>
+							<input	type="hidden" name="star" value="<?= $star?>">
+							<input	type="hidden" name="id" value="<?= $id?>">
+						</form>
+						<?php 
+					} else {
+						echo "<br>แต้มของคุณไม่พอสำหรับโปรโมชั่นนี้<br>
+						<b>แต้มที่ใช้ = 10 แต้ม</b></p>";
+						//$drinks=namedrinks;
+					}
+				}
+				if ($_POST['ok'] == 'cf') {
 					// $star = $star-7;
 					$star=$_POST['star'];
 					$id=$_POST['id'];
-					echo "<p>Star = ";
-					echo $star-10,'<br>';
+					echo '<b><p class="pb">Star = ';
+					echo $star-10,'<br></b>';
 					$conn = conn();
 					$re_code=rand(10000,1000000);
 					$code_sql = "INSERT INTO redeem(re_code) VALUES('$re_code')" ;
 					$conn->query($code_sql);
-						echo "Code: ",$re_code,'<br></p>';
-						?>
-							<button onclick="location.href='index.php'">Back to Homepage</button>
-						<?php 
+					echo "<b>Code: ",$re_code,'<br></b></p>';
+					?>
+					<center><button class="input" onclick="location.href='index.php'">กลับสู่หน้าแรก</button></center>
+					<?php 
 				}
 			?>
 			</div>

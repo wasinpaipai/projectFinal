@@ -12,7 +12,7 @@
 <body style="font-family: 'Athiti', sans-serif;">
 	<nav>
         <div class="logo">
-            <img id="shop_logo" src="Multi/icon_122.jpg" align="middle">
+            <a href="index.php"><img id="shop_logo" src="Multi/icon_122.jpg" align="middle"></a>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="index.php"><h3>Home</h3></a>
